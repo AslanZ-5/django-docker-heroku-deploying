@@ -15,9 +15,9 @@ SECRET_KEY = "django-insecure-*nz9%!yf2lm5$azreepbun=6@j@l==kow^n8tl9(m-(_uo*#tn
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.0.1']
+ALLOWED_HOSTS = ['localhost','127.0.0.0.1','boiling-basin-27622.herokuapp.com']
 
 
 # Application definition
@@ -109,7 +109,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+CSRF_TRUSTED_ORIGINS = ['https://boiling-basin-27622.herokuapp.com']
 
 
 
