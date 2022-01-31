@@ -1,19 +1,17 @@
 import os
-import environ
+
 from pathlib import Path
 
 from core.settings.settings import BASE_DIR 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-env = environ.Env()
-environ.Env.read_env()
 
 # Boto3
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+AWS_ACCESS_KEY_ID = 'AKIARTHVHMINHL3C6TFQ'
+AWS_SECRET_ACCESS_KEY ='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'
+AWS_STORAGE_BUCKET_NAME ='djanog'
 AWS_DEFAULT_ACL = None
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 # AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.us-east-1.s3.amazonaws.com'
